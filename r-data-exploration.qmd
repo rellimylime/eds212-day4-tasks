@@ -38,4 +38,8 @@ ggplot(data = diamonds, aes(x = carat, y = price)) +
 # histogram
 ggplot(data = diamonds, aes(x = carat)) +
   geom_histogram()
+
+# boxplot
+ggplot(data = diamonds, aes(x = clarity, y = price)) +
+  geom_boxplot(aes(color = cut))
 ```
