@@ -1,0 +1,41 @@
+---
+title: "r-data-exploration"
+format: html
+editor: visual
+---
+
+## Data exploration in R
+
+```{r}
+# Add libraries
+library(tidyverse)
+library(skimr)
+library(GGally)
+
+```
+
+```{r}
+# View the dataset
+# View(diamonds)
+
+# Explore/describe data
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+```
+
+```{r}
+# pairs plot
+ggpairs(data = diamonds)
+
+# Scatterplot
+ggplot(data = diamonds, aes(x = carat, y = price)) +
+  geom_point()
+
+# histogram
+ggplot(data = diamonds, aes(x = carat)) +
+  geom_histogram()
+```
